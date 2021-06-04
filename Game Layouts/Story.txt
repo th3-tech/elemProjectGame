@@ -1,0 +1,50 @@
+
+You are the leader of a small army for a town called Generic Home Town, and it's winter. Your under seige and the only foods you can 
+happen to have very low potassium count, like pasta and asparagus. Scavenge for high pottasium foods (color coded: purple - high; 
+yellow - medium; red - low) You don't have long, you and your little army aren't going to be able to hold out like this much longer 
+before you start contracting severe hypokalemia
+
+Base stats:
+
+Army size - 10
+
+Average pottasium per day of the army over the last week - 2,000 miligrams
+
+Average pottasium per day of yourself over the last week- 3,200 miligrams
+
+Heartbeat - slightly irregular
+
+Muscles - slightly week
+
+Popularity - 10
+
+locations to search [
+	village houses
+	countryside
+	woods
+	
+]
+
+list of common scavengable foods : [
+	pasta, house
+	apple, countryside
+	a few slices of bread, house
+	onion, woods
+	  
+]
+list of medium scavengable foods : [
+	Chili Pepper, woods
+	Part of a Pineapple, village houses
+	A pack of girl scout trefoil cookies, vilage houses
+	Lettuce, countryside
+	spinach, countryside
+	celery, countryside
+]
+list of rare scavengable goods : [
+	banana, woods
+	avacado, village houses
+	full pineapple, village houses
+	sweet potato, village houses
+	pomegranate, countryside
+	swiss chard, woods
+]
