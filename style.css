@@ -1,0 +1,59 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+#symbol {
+    position: relative;
+    float: right;
+    top: 50px;
+}
+html {
+    background: rgba( 255, 220, 0, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+}
+#symbolText {
+    position: relative;
+    top: 40px;
+}
+#titleDiv{
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+}
+#title{
+    font-weight: 700;
+    width: 100%;
+    top: -25px;
+}
+
+#nutrition{
+    position: relative;
+    float: left;
+    margin-top: 50px;
+}
+#banana{position: relative; height: 220px; width: auto; top: -30px;}
+#nutritionText{position: relative; top: 40px}
+h1 {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+}
+#potFoodsTitle{
+    position: absolute;
+    top: 590px;
+    width: 104%;
+}
+.titl{
+    background: rgba( 255, 220, 0, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+}
+#model{
+    top: 50px;
+    position: relative;
+    float: right;
+}
