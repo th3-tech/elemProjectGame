@@ -1,2 +1,2 @@
 # elemProjectGame
-A project which will either be on Fluorine or Potassium, in the form of an JS and HTML game
+A project on potassium, right now a web page and possibly a game in the future
