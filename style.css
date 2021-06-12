@@ -56,4 +56,14 @@ h1 {
     top: 50px;
     position: relative;
     float: right;
+.navigation{
+    border-radius: 5px;  
+    border-width: thick;
+    font-weight: bold;
+    font-size: 30px;
+    color: peru;
+}
+#gameNav{
+    float: right;
+    position: relative;
 }
