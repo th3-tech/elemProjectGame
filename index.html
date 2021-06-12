@@ -15,7 +15,10 @@
 <body>
     <div id = "titleDiv">
         <h1 id = "title" class = "titl"> POTASSIUM <br/>PROJECT</h1>
-    </div>  
+    </div> 
+    <nav>
+        <span onclick = 'switchToGame() ' id = 'gameNav' class = 'navigation'>Game</span>
+    </nav> 
     <p id = "clickExplain" style = "font-size: larger;  color: blueviolet; position: absolute; top: -15px; font-weight: bold;" onclick = "clickExplain()">Click Me</p>
     <div id = "symbol">
         <h4 style="text-align:center;display:inline-block;" id = "symbolText">
@@ -69,52 +72,10 @@
     function alloyDef(){
         alert('Metallic substance composed of two or more elements, as either a compound or a solution')
     }
-    console.log(window.getComputedStyle(document.getElementById("potFoodsTitle"), null).getPropertyValue('font-weight'))
-    //variables
-    var armySize = 10;
-    var avgArmy = 2000;
-    var avgSelf = 3200;
-    var heartbeat = 3;
-    var muscles = 3;
-    var popularity = 10;
-    //foods 
-    class food {
-        constructor(name, desc, rarity, potassium, mass, plantable, plantTime) {
-            this.name = name
-            this.desc = desc
-            this.rarity = rarity
-            this.potassium = potassium
-            this.mass = mass
-            this.plantable = plantable
-            this.plantTime = plantTime
-        }
+    function switchToGame(){
+        window.location.href = "html/game.html"
     }
-    var pasta = new food("Pasta", "A resident was able to spare a bit of pasta", "common", 56, 228, false, 0)
-    var apple = new food("Apple", "Some small apple found near a burnt down apple orchard", "common", 159, 149, true, 4)
-    var bread = new food("Bread", "A few slices of white bread found in an abandoned house", "common", 87, 75, false, 0)
-    var onion = new food("Onion", "Some small raw onion found in the woods", "common", 102, 70, true, 2)
-    var trefoil = new food("Trefoils", "A large pack of Girl Scout Trefoil cookies", "common", 56, 264, false, 0)
-    var pepper = new food("Pepper", "Red chili pepper found growing on a plant", "medium", 242, 75, true, 1)
-    var pineappleBit = new food("Pineapple", "A bit of a pineapple offered by a villager", "medium", 246, 226)
-    var lettuce = new food("Iceberg lettuce", "Some crushed iceberg lettuce", "medium", 306, 216)
-    var spinach = new food("Spinach", "A little bundle of spinach", "medium", 270, 79)
-    var celery = new food("Celery", "Some celery stalks", "medium", 330, 250)
-    var banana = new food("Banana", "A small bunch of bananas", "rare", 1086, 303)
-    var avocado = new food("Avocado", "Just some avocado", "rare", 1950, 402)
-    var pineappleFull = new food("Pineapple", "A full pineapple cut into pieces on a plate", "rare", 986, 905)
-    var potato = new food("Potato", "A large potato found uprooted on the ground", "rare", 1553, 369)
-    var pomegranate = new food("Pomegranate", "A little bundle of spinach", "rare", 708, 300)
-    var swissChard = new food("Swiss Chard", "A little bundle of spinach", "rare", 961, 175)
-    var appleBasket = new food("A basket of apples", "A little bundle of spinach", "rare", 270, 79)
-    //lists
-    var search = [
-        "village houses",
-        "countryside",
-        "woods"
-    ]
-    var villageHouses = [
-        pasta
-    ]
+    console.log(window.getComputedStyle(document.getElementById("potFoodsTitle"), null).getPropertyValue('font-weight'))
    
 </script>
 </html>
