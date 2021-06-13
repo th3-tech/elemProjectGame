@@ -114,3 +114,7 @@ h1 {
     top: 35%;
     left: 47.6%
 }
+#gameNav{
+    float: right;
+    position: relative;
+}
