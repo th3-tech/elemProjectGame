@@ -25,7 +25,7 @@
 </style>
 <body onload = 'setQuestion()'>
     <nav>
-        <span class="navigation"onclick='switchToHome()'>Home</span>
+        <button class="navigation btn btn-primary" style = 'position: absolute; right: 0px; font-size: 20px; border: 2px solid black; font-weight: bold' onclick='switchToHome()'>Home</button>
     </nav>
     <h1 id="gameTitle" class = 'all-center'>question</h1>
     <div id = 'optionCon' class = "all-center"> </div>
@@ -38,6 +38,9 @@
         <!-- <input type = number class = 'third all-center inBot' value = 0> -->
         <button id = 'fourth' class='fourth all-center btn btn-primary' >option 4</button>
         <!-- <input type = number class = 'fourth all-center inBot inRight' value = 0> -->
+    </div>
+    <div id="timer" class = 'all-center'>
+        00:00:00
     </div>
     
 
@@ -60,7 +63,13 @@
     document.getElementById('fourth').addEventListener("click", function(){clicked = 'fourth'; checkAnswer() })
 
     function setQuestion() {
-        qNumber += 1;
+        if (qNumber == 0) {
+            question = 'Start?'
+            ans1 = 'Sure'
+            ans2 = 'Yes'
+            ans3 = 'Of Course'
+            ans4 = 'Why Not?'
+        }
         if (qNumber == 1) {
             question = 'What is the state of potassium at room temperature'
             ans1 = 'Solid'
@@ -132,11 +141,12 @@
             ans4 = 'Sink'
         }
         if (qNumber == 11) {
-            question = 'Your score was '+score+' out of 10!'
+            question = 'Your score was '+score+' out of 10! (The stopwatch used is by GSPTeck)'
             ans1= 'Yay!'
             ans2 = 'Yay!'
             ans3 = 'Yay!'
             ans4 = 'Yay!'
+            stopTimer()
         }
         document.getElementById('gameTitle').textContent = question
         let available = [
@@ -162,12 +172,90 @@
         document.getElementById('fourth').textContent = chosen
     }
     function checkAnswer(){        
-        if (document.getElementById(clicked).textContent == ans1) {
+        if (document.getElementById(clicked).textContent == ans1 && qNumber != 0) {
             score += 1
+            document.getElementById(clicked).classList.remove('btn-primary')
+            document.getElementById(clicked).classList.add('btn-success')
+            setTimeout(function(){
+                document.getElementById(clicked).classList.remove('btn-success')
+                document.getElementById(clicked).classList.add('btn-primary')
+                console.log(score)
+                qNumber += 1;
+                setQuestion()
+            }, 200);
         }
-        console.log(score)
-        setQuestion()
+        else if (qNumber != 0) {
+            document.getElementById(clicked).classList.remove('btn-primary')
+            document.getElementById(clicked).classList.add('btn-danger')
+            setTimeout(function(){
+                document.getElementById(clicked).classList.remove('btn-danger')
+                document.getElementById(clicked).classList.add('btn-primary')
+                console.log(score)
+                qNumber += 1;
+                setQuestion()
+            }, 200);
+        }
+        else {
+            console.log(score)
+            qNumber += 1;
+            startTimer()
+            setQuestion()
+        }
+        
     }
+    //Timer from https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak
+    const timer = document.getElementById('timer');
+
+var hr = 0;
+var min = 0;
+var sec = 0;
+var stoptime = true;
+
+function startTimer() {
+  if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
+}
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
+
+function timerCycle() {
+    if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
+
+    sec = sec + 1;
+
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
+
+    timer.innerHTML = hr + ':' + min + ':' + sec;
+
+    setTimeout("timerCycle()", 1000);
+  }
+}
     //scrapped game below
 
     //variables

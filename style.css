@@ -44,7 +44,7 @@ h1 {
 #potFoodsTitle{
     position: absolute;
     top: 590px;
-    width: 104%;
+    width: 99%;
 }
 .titl{
     background: rgba( 255, 220, 0, 0.3 );
@@ -62,12 +62,12 @@ h1 {
     border-width: thick;
     font-weight: bold;
     font-size: 30px;
-    color: peru;
+    color: black;
     float: right;
     position: relative;
 }
 #gameNav{
-    color: peru;
+    color: white;
 }
 .all-center {
     margin: 0;
@@ -75,21 +75,25 @@ h1 {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
-.first{
-    left: 42%;
-    top: 45%;
+#first{
+    left: 35%;
+    top: 50%;
+    font-size: 30px;
 }
-.second{
-    left: 53%;
-    top: 45%;
+#second{
+    left: 60%;
+    top: 50%;
+    font-size: 30px;
 }
-.third{
-    left: 42%;
-    bottom: 45%;
+#third{
+    left: 35%;
+    bottom: 30%;
+    font-size: 30px;
 }
-.fourth{
-    left: 53%;
-    bottom: 45%;
+#fourth{
+    left: 60%;
+    bottom: 30%;
+    font-size: 30px;
 }
 .inTop{
     top: 40%
@@ -105,12 +109,17 @@ h1 {
 }
 #optionCon{
     border: 3px solid black;
-    top: 47.6%;
-    width: 17%;
-    height: 100px;
+    top: 57%;
+    width: 50%;
+    height: 30%;
     left: 47.6%
 }
 #gameTitle{
     top: 35%;
     left: 47.6%
+}
+#timer{
+    font-size: 100px;
+    left: 47.6%;
+    top: 80%
 }

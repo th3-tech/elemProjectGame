@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script> -->
     
@@ -17,28 +20,28 @@
         <h1 id = "title" class = "titl"> POTASSIUM <br/>PROJECT</h1>
     </div> 
     <nav>
-        <span onclick = 'switchToGame() ' id = 'gameNav' class = 'navigation'>Game</span>
+        <button onclick = 'switchToGame() ' id = 'gameNav' class = 'navigation btn btn-primary' style = 'font-size: 20px; border: 2px solid black; position: absolute; right: 0px' >Game</button>
     </nav> 
-    <p id = "clickExplain" style = "font-size: larger;  color: blueviolet; position: absolute; top: -15px; font-weight: bold;" onclick = "clickExplain()">Click Me</p>
+    <p id = "clickExplain" style = "font-size: larger;  color: blueviolet; position: absolute; top: 0px; font-weight: bold;" onclick = "clickExplain()">Click Me</p>
     <div id = "symbol">
         <h4 style="text-align:center;display:inline-block;" id = "symbolText">
-            Potassium has 19 protons so its atomic number is 19 <br/>and an approximate atomic weight of 39 normally<br> its symbol is K and it has 19 electrons in a stable atom. <br/> It is solid in room temperature and an Alkali Metal. The melting point is <br>around 146 degrees fahrenheit and the boiling point is around 1,400<br> It's density is 
+            Potassium has 19 protons so its atomic number is 19 <br/>and an approximate atomic weight of 39 normally<br> Its symbol is K and it has 19 electrons in a stable atom. <br/> It is solid in room temperature and an Alkali Metal. The melting point is <br>around 146 degrees fahrenheit and the boiling point is around 1,400<br> It's density is 
             0.862 <span style = "color: blueviolet" onclick="gcc()">g/cc</span> 
         </h4>
         <img src = "https://sciencenotes.org/wp-content/uploads/2015/04/Potassium_Tile.png" style = "vertical-align: middle;" width=250 height=250 />
     </div>
     <div id = "nutrition"> 
         <a title="Elembis, Public domain, via Wikimedia Commons" target ="_blank" href="https://commons.wikimedia.org/wiki/File:Bananas.svg"><img width="512" alt="Bananas" id = "banana" style = "vertical-align: middle;"src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bananas.svg/512px-Bananas.svg.png"></a>
-        <h4 style="text-align:center;display:inline-block;" id = "nutritionText">Potassium is important in the diet to <ul><li>keep your <span style = "color: blueviolet;" onclick="nerveDef()">nerves</span> working</li> <li>help your muscles contract</li> <li>keep a regular heartbeat</li></ul>It is also commonly used for fertilizers <br >when combined with Chlorine (KCl)<br>and with sodium (NaK) it makes an <span style = 'color: blueviolet;' onclick = 'alloyDef()'>alloy</span> that is <br>sometimes used in nuclear reactors</h4>
+        <h4 style="text-align:center;display:inline-block;" id = "nutritionText">Potassium is important in the diet to <ul><li>keep your <span style = "color: blueviolet;" onclick="nerveDef()">nerves</span> working</li> <li>help your muscles contract</li> <li>keep a regular heartbeat</li></ul>It is also commonly used for fertilizers <br >when combined with Chlorine (KCl).<br> With sodium (NaK) it makes an <span style = 'color: blueviolet;' onclick = 'alloyDef()'>alloy</span> that is <br>sometimes used in nuclear reactors</h4>
     </div>
     <div id = "model">
-        <h4 style="text-align:center;display:inline-block; position: relative; top: -116px;" id = "nutritionText">There are 19 electrons in potassium, and has one electron in it's <span style = 'color: blueviolet;' onclick = 'valence()'>valence</span> shell <br/> One of the people who discovered it was Sir Humphry Davy<br><span style = 'font-weight: 700;'>
+        <h4 style="text-align:center;display:inline-block; position: relative; top: -116px;" id = "nutritionText"> Potassium has one electron in it's <span style = 'color: blueviolet;' onclick = 'valence()'>valence</span> shell <br/> One of the people who discovered it was Sir Humphry Davy<br><span style = 'font-weight: 700;'>
         -FACTS-</span><ul><li>Under contact with water, a strong exothermic <a href = 'https://www.youtube.com/watch?v=Jy1DC6Euqj4' target = '_blank'>reaction is created</a> </li><li>Potassium is the <a href = https://pubchem.ncbi.nlm.nih.gov/element/Potassium#section=Sources'>seventh most 
         common metal</a> in the crust of the earth</li></ul>One isotope for potassium is 40-K which lasts very long and can be used for dating rocks<br>As previously mentioned, potassium is found in the earth's crust but is also very commonly found in food</h4>
         <a href="https://in.pinterest.com/pin/838865868072941779/" target="_blank" title="Potassium Model"><img style= "position: relative; width: auto; height: 250px; top: -80px;" src="https://i.pinimg.com/originals/df/35/74/df35749535e2afbaab0752c0b1163560.png" alt="Potassium Model"></a>
     </div>
     <div id="potFoods"> 
-        <h1 class = "titl" id = potFoodsTitle >
+        <h1 class = "titl" id = 'potFoodsTitle' >
             Foods that have high potassium</h1>
         <div style = "position:relative; float: right; top: 70px; left: 0px;"> 
             <h4 style='right: 250px; display:inline-block;'>Swiss chard has around 325 mg of potassium per 100g</h4>
@@ -46,7 +49,7 @@
         </div>
         <div id = sweetPotato style = "left: 0px; position: absolute; top: 700px;">
             <a href="https://www.cooksillustrated.com/how_tos/10863-how-to-choose-a-sweet-potato" target="_blank" title="A sweet potato"><img style = "width: auto; height: 250px;" src="https://res.cloudinary.com/hksqkdlah/image/upload/37117_sil-sweetpotato-hannah-1.png" alt="A sweet potato"></a>
-            <h4 style="position: relative; top: -40px; left: -300px; text-align:center;display:inline-block;" id = "nutritionText">Sweet Potato has around 337<span onclick="mgDef()" style="color: blueviolet;">mg </span> of<br>potassium per 100<span onclick="gramDef()" style = "color: blueviolet;">g</span></h4>
+            <h4 style="position: relative; top: -70px; left: -300px; text-align:center;display:inline-block;" id = "nutritionText">Sweet Potato has around 337<span onclick="mgDef()" style="color: blueviolet;">mg </span> of<br>potassium per 100<span onclick="gramDef()" style = "color: blueviolet;">g</span></h4>
         </div>
     </div>
 </body>
