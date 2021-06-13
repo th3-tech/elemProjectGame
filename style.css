@@ -63,8 +63,54 @@ h1 {
     font-weight: bold;
     font-size: 30px;
     color: peru;
-}
-#gameNav{
     float: right;
     position: relative;
+}
+#gameNav{
+    color: peru;
+}
+.all-center {
+    margin: 0;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+.first{
+    left: 42%;
+    top: 45%;
+}
+.second{
+    left: 53%;
+    top: 45%;
+}
+.third{
+    left: 42%;
+    bottom: 45%;
+}
+.fourth{
+    left: 53%;
+    bottom: 45%;
+}
+.inTop{
+    top: 40%
+}
+.inBot{
+    bottom: 40%
+}
+.inRight{
+    right: 43.5%;
+}
+#voting{
+    border-radius: 10px;
+}
+#optionCon{
+    border: 3px solid black;
+    top: 47.6%;
+    width: 17%;
+    height: 100px;
+    left: 47.6%
+}
+#gameTitle{
+    top: 35%;
+    left: 47.6%
 }

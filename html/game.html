@@ -6,11 +6,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potassium Project</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<style>
+    input{
+        width: 50px;
+        border: none;
+        background: none;
+        color: #515994;
+        font-size: 30px;
+        margin: 0;
+    }
+</style>
+<body onload = 'setQuestion()'>
+    <nav>
+        <span class="navigation"onclick='switchToHome()'>Home</span>
+    </nav>
+    <h1 id="gameTitle" class = 'all-center'>question</h1>
+    <div id = 'optionCon' class = "all-center"> </div>
+    <div id = 'voting' style = 'border: 1px solid black'> 
+        <button id = 'first' class='first all-center btn btn-primary' >option 1</button>
+        <!-- <input type = number class = 'first all-center inTop' value = 0> -->
+        <button id = 'second' class='second all-center btn btn-primary' >option 2</button>
+        <!-- <input type = number class = 'second all-center inTop inRight' value = 0> -->
+        <button id = 'third' class='third all-center btn btn-primary' >option 3</button>
+        <!-- <input type = number class = 'third all-center inBot' value = 0> -->
+        <button id = 'fourth' class='fourth all-center btn btn-primary' >option 4</button>
+        <!-- <input type = number class = 'fourth all-center inBot inRight' value = 0> -->
+    </div>
     
+
 </body>
 <script>
+    function switchToHome(){
+        window.location.href = "../index.html"
+    }
+    var qNumber = 0;
+    var question = ''
+    var ans1 = ''
+    var ans2 = ''
+    var ans3 = ''
+    var ans4 = ''
+    var score = 0
+    var clicked = ''
+    document.getElementById('first').addEventListener("click", function(){clicked = 'first'; checkAnswer() })
+    document.getElementById('second').addEventListener("click", function(){clicked = 'second'; checkAnswer() })
+    document.getElementById('third').addEventListener("click", function(){clicked = 'third'; checkAnswer() })
+    document.getElementById('fourth').addEventListener("click", function(){clicked = 'fourth'; checkAnswer() })
+
+    function setQuestion() {
+        qNumber += 1;
+        if (qNumber == 1) {
+            question = 'What is the state of potassium at room temperature'
+            ans1 = 'Solid'
+            ans2 = 'Liquid'
+            ans3 = 'Gas'
+            ans4 = 'Plasma'
+        }
+        if (qNumber == 2) {
+            question = 'Which group is potassium in'
+            ans1 = 'Alkali Metals'
+            ans2 = 'Noble  Gases'
+            ans3 = 'Halogens'
+            ans4 = 'Chalcogens'
+        }
+        if (qNumber == 3) {
+            question = "What is potassium's melting point (fahrenheit)"
+            ans1 = '146'
+            ans2 = '1,400'
+            ans3 = '862'
+            ans4 = '337'
+        }
+        if (qNumber == 4) {
+            question = "Potassium is the ____ most common element in the earth's crust"
+            ans1 = 'Seventh'
+            ans2 = 'First'
+            ans3 = 'Fifteenth'
+            ans4 = 'Sixteenth'
+        }
+        if (qNumber == 5) {
+            question = "What is potassium used as when combined with chlorine"
+            ans1 = 'Fertilizer'
+            ans2 = 'Alloy'
+            ans3 = 'Dating Rocks'
+            ans4 = 'Steady Heartbeat'
+        }
+        if (qNumber == 6) {
+            question = "How many neutrons does potassium have"
+            ans1 = '20'
+            ans2 = '19'
+            ans3 = '15'
+            ans4 = '12'
+        }
+        if (qNumber == 7) {
+            question = "Who discovered potassium"
+            ans1 = 'Sir Humphry Davy'
+            ans2 = 'Albert Einstein'
+            ans3 = 'John William Strutt'
+            ans4 = 'Henry Cavendish'
+        }
+        if (qNumber == 8) {
+            question = "What is one way potassium benefits the body"
+            ans1 = 'Helps Nerves Function'
+            ans2 = 'Maintains Bone Density'
+            ans3 = 'Fights Bacteria'
+            ans4 = 'Helps You Fall Asleep'
+        }
+        if (qNumber == 9) {
+            question = "What is the density of potassium"
+            ans1 = '0.862 g/cc'
+            ans2 = '8.62 g/cc'
+            ans3 = '86.2 g/cc'
+            ans4 = '862 g/cc'
+        }
+        if (qNumber == 10) {
+            question = "What does potassium do when in contact with water"
+            ans1 = 'Explode'
+            ans2 = 'Dissolve'
+            ans3 = 'Float'
+            ans4 = 'Sink'
+        }
+        if (qNumber == 11) {
+            question = 'Your score was '+score+' out of 10!'
+            ans1= 'Yay!'
+            ans2 = 'Yay!'
+            ans3 = 'Yay!'
+            ans4 = 'Yay!'
+        }
+        document.getElementById('gameTitle').textContent = question
+        let available = [
+            ans1,
+            ans2,
+            ans3,
+            ans4,
+        ]
+        //set a variable to a random answer
+        let chosen = available[Math.floor(Math.random() * available.length)]
+        //set a button to that random answer
+        document.getElementById('first').textContent = chosen
+        //remove the answer from the list
+        available.splice(available.indexOf(chosen), 1)
+        //repeat
+        chosen = available[Math.floor(Math.random() * available.length)]
+        document.getElementById('second').textContent = chosen
+        available.splice(available.indexOf(chosen), 1)
+        chosen = available[Math.floor(Math.random() * available.length)]
+        document.getElementById('third').textContent = chosen
+        available.splice(available.indexOf(chosen), 1)
+        chosen = available[Math.floor(Math.random() * available.length)]
+        document.getElementById('fourth').textContent = chosen
+    }
+    function checkAnswer(){        
+        if (document.getElementById(clicked).textContent == ans1) {
+            score += 1
+        }
+        console.log(score)
+        setQuestion()
+    }
+    //scrapped game below
+
     //variables
     var armySize = 10;
     var avgArmy = 2000;
