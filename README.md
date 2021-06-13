@@ -1,2 +1,2 @@
 # elemProjectGame
-A project on potassium, right now a web page and possibly a game in the future
+A project on potassium, including a web page and a small multiple choice quiz on it
