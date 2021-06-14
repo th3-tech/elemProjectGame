@@ -249,19 +249,11 @@ function timerCycle() {
       hr = '0' + hr;
     }
 
-    timer.innerHTML = hr + ':' + min + ':' + sec;
+    timer.textContent = hr + ':' + min + ':' + sec;
 
     setTimeout("timerCycle()", 1000);
   }
 }
-    //scrapped game below
-
-        if (document.getElementById(clicked).textContent == ans1) {
-            score += 1
-        }
-        console.log(score)
-        setQuestion()
-    }
     //scrapped game below
     //variables
     var armySize = 10;
